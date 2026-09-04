@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="A premium, real-time temperature converter for Celsius, Fahrenheit, and Kelvin." />
+    <title>Temperature Converter | Live Conversion</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body data-temperature="mild">
+    <div class="app-shell">
+        <!-- ============================================================ -->
+        <!-- COMPONENT 1: HEADER & THEME TOGGLE                           -->
+        <!-- ============================================================ -->
+        <header class="site-header">
+            <div>
+                <div class="eyebrow">
+                    <i class="fas fa-bolt" style="color: var(--accent);"></i>
+                    Precision utility <span aria-hidden="true">•</span> Live results
+                </div>
+                <h1><i class="fas fa-temperature-high" style="background: transparent; -webkit-background-clip: unset; background-clip: unset; color: var(--accent);"></i> Temperature Converter</h1>
+                <p class="subtitle">Convert between Celsius, Fahrenheit &amp; Kelvin instantly.</p>
+            </div>
+            <div class="theme-control">
+                <span id="theme-label"><i class="fas fa-moon"></i> Dark mode</span>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+                    <i class="fas fa-circle" style="font-size: 1.2rem; color: #172033; transition: all 0.35s ease;"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="workspace">
+            <!-- ============================================================ -->
+            <!-- COMPONENT 2: LIVE VISUAL THERMOMETER                         -->
+            <!-- ============================================================ -->
+            <section class="thermometer-panel glass-panel" aria-labelledby="thermometer-title">
+                <h2 class="panel-label" id="thermometer-title">
+                    <i class="fas fa-thermometer-half"></i> Live temperature
+                </h2>
+                <div class="thermometer-wrap">
+                    <div class="thermometer" id="thermometer" role="img" aria-label="Temperature gauge">
+                        <div class="thermometer-fill" id="thermometer-fill"></div>
+                    </div>
+                    <div class="thermo-readout">
+                        <p class="readout-value" id="thermo-value">25.00°</p>
+                        <p class="readout-unit">Celsius scale</p>
+                    </div>
+                </div>
+                <p class="scale-note"><i class="fas fa-arrows-up-down"></i> Visual scale: −50°C to 100°C</p>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- COMPONENT 3: INTERACTIVE CONVERTER CARD                     -->
+            <!-- ============================================================ -->
+            <section class="converter-card glass-panel" aria-labelledby="converter-title">
+                <div class="card-heading">
+                    <h2 id="converter-title"><i class="fas fa-calculator"></i> Make a conversion</h2>
+                    <p>Choose a source unit and see every equivalent at once.</p>
+                </div>
+
+                <form id="converter-form" novalidate>
+                    <div class="field-group">
+                        <label class="field-label" for="temp-input">
+                            <i class="fas fa-pen"></i> Enter Temperature
+                        </label>
+                        <div class="input-row">
+                            <input id="temp-input" name="temperature" type="number" inputmode="decimal" placeholder="e.g., 25" step="any" autocomplete="off" aria-describedby="validation-message zero-warning" />
+                        </div>
+                        <div class="validation-message" id="validation-message" role="alert">
+                            <i class="fas fa-exclamation-circle"></i> Please enter a valid number.
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <span class="field-label"><i class="fas fa-arrow-right"></i> From</span>
+                        <div class="unit-pills" role="radiogroup" aria-label="Input temperature unit">
+                            <input id="unit-celsius" type="radio" name="unit" value="C" checked />
+                            <label class="unit-pill" for="unit-celsius">°C Celsius</label>
+                            <input id="unit-fahrenheit" type="radio" name="unit" value="F" />
+                            <label class="unit-pill" for="unit-fahrenheit">°F Fahrenheit</label>
+                            <input id="unit-kelvin" type="radio" name="unit" value="K" />
+                            <label class="unit-pill" for="unit-kelvin">K Kelvin</label>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="results-heading">
+                            <span class="field-label"><i class="fas fa-list"></i> Converted Results (Live)</span>
+                            <span class="live-indicator"><i class="fas fa-circle"></i> Live</span>
+                        </div>
+                        <div class="results-grid" aria-live="polite">
+                            <div class="result-box">
+                                <span class="result-name"><i class="fas fa-thermometer-half"></i> Celsius</span>
+                                <strong class="result-value" id="result-celsius">25.00 <span class="unit">°C</span></strong>
+                            </div>
+                            <div class="result-box">
+                                <span class="result-name"><i class="fas fa-thermometer-three-quarters"></i> Fahrenheit</span>
+                                <strong class="result-value" id="result-fahrenheit">77.00 <span class="unit">°F</span></strong>
+                            </div>
+                            <div class="result-box">
+                                <span class="result-name"><i class="fas fa-thermometer"></i> Kelvin</span>
+                                <strong class="result-value" id="result-kelvin">298.15 <span class="unit">K</span></strong>
+                            </div>
+                        </div>
+                        <div class="zero-warning" id="zero-warning" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i> Error: Temperature cannot go below Absolute Zero (-273.15°C / -459.67°F / 0K).
+                        </div>
+                    </div>
+
+                    <button class="convert-button" type="submit">
+                        <i class="fas fa-sync-alt"></i> Convert temperature
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- ============================================================ -->
+        <!-- COMPONENT 4: FOOTER                                          -->
+        <!-- ============================================================ -->
+        <footer>
+            <i class="fas fa-copyright"></i> <span id="current-year"></span> Temperature Converter | Built with <i class="fas fa-heart" style="color: #ff4d4d;"></i> using Vanilla JS
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
