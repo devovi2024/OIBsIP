@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hidden Kitchen, an exclusive dining experience where every dish is a secret worth discovering." />
+    <title>The Menu Is Mystery</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: STICKY NAVIGATION                                  -->
+    <!-- ============================================================ -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="logo" href="#hero">
+                <i class="fas fa-utensils"></i> Hidden Kitchen
+            </a>
+
+            <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation menu" />
+            <label class="menu-toggle" for="nav-toggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#chefs">Chefs</a></li>
+                <li><a href="#reserve">Reserve</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: HERO SECTION                                       -->
+    <!-- ============================================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="eyebrow"><i class="fas fa-star"></i> EXCLUSIVE DINING <i class="fas fa-star"></i></p>
+            <h1>THE MENU IS A MYSTERY</h1>
+            <p class="hero-subtitle">
+                We believe the finest cuisine emerges from recipes whispered through generations.
+                Behind every dish lies a secret waiting to be discovered. Are you ready to unlock the mystery?
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="#menu">
+                    <i class="fas fa-unlock-alt"></i> Unlock Secret
+                </a>
+                <a class="button button-outline" href="#reserve">
+                    <i class="fas fa-calendar-alt"></i> Book a Table
+                </a>
+            </div>
+
+            <div class="stats" aria-label="Restaurant highlights">
+                <div class="stat">
+                    <strong>127+</strong>
+                    <span><i class="fas fa-utensil-spoon"></i> Secret Dishes</span>
+                </div>
+                <div class="stat">
+                    <strong>4.9★</strong>
+                    <span><i class="fas fa-star"></i> Rating</span>
+                </div>
+                <div class="stat">
+                    <strong>15+</strong>
+                    <span><i class="fas fa-trophy"></i> Awards</span>
+                </div>
+            </div>
+        </div>
+
+        <a class="scroll-arrow" href="#menu" aria-label="Scroll to menu">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: SIGNATURE DISHES                                   -->
+    <!-- ============================================================ -->
+    <section class="section" id="menu">
+        <header class="section-header">
+            <p class="section-tag"><i class="fas fa-gem"></i> Secret Signatures</p>
+            <h2>Our Culinary Masterpieces</h2>
+            <p>Each dish is crafted with passion, precision, and a touch of mystery. These are the creations that define our kitchen.</p>
+        </header>
+
+        <div class="dishes-grid">
+            <!-- Card 1: Chef's Pick -->
+            <article class="dish-card featured">
+                <span class="dish-badge"><i class="fas fa-star"></i> Chef's Pick</span>
+                <span class="dish-icon"><i class="fas fa-crown"></i></span>
+                <h3>Royal Platter</h3>
+                <p>A majestic assembly of 7 signature delicacies, each representing a different culinary tradition. Perfect for those who seek variety and excellence.</p>
+                <span class="code-pill"><i class="fas fa-key"></i> ROYAL7</span>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="dish-card">
+                <span class="dish-icon"><i class="fas fa-fire"></i></span>
+                <h3>Dragon's Breath</h3>
+                <p>An intensely flavorful noodle dish infused with rare Himalayan spices. Not for the faint-hearted; legend says only the brave finish it.</p>
+                <span class="code-pill"><i class="fas fa-key"></i> DRAGON99</span>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="dish-card">
+                <span class="dish-icon"><i class="fas fa-leaf"></i></span>
+                <h3>Forest Taste</h3>
+                <p>A woodland-inspired creation featuring foraged mushrooms, wild herbs, and truffle essence. A tribute to nature's hidden bounty.</p>
+                <span class="code-pill"><i class="fas fa-key"></i> FOREST42</span>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="dish-card">
+                <span class="dish-icon"><i class="fas fa-moon"></i></span>
+                <h3>Midnight Dessert</h3>
+                <p>A decadent dark chocolate fondue served with exotic fruits and handmade marshmallows. Only available for late-night reservations.</p>
+                <span class="code-pill"><i class="fas fa-key"></i> MIDNIGHT</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: PHILOSOPHY                                         -->
+    <!-- ============================================================ -->
+    <section class="section philosophy" id="philosophy">
+        <blockquote class="quote">
+            Food is not merely sustenance—it is a narrative. Every ingredient tells a story of origin,
+            every technique reflects a tradition, and every dish serves as a bridge between cultures.
+        </blockquote>
+        <p class="quote-attribution"><i class="fas fa-quote-right"></i> Our Kitchen Philosophy</p>
+
+        <div class="values">
+            <article class="value-card">
+                <span class="value-icon"><i class="fas fa-seedling"></i></span>
+                <h3>Sustainable Sourcing</h3>
+                <p>We partner with local farmers and ethical suppliers who share our commitment to quality and environmental responsibility. Every ingredient is traceable from farm to plate.</p>
+            </article>
+
+            <article class="value-card">
+                <span class="value-icon"><i class="fas fa-handshake"></i></span>
+                <h3>Respect for Tradition</h3>
+                <p>Our recipes honor generations of culinary wisdom while embracing modern techniques. We preserve the authenticity of each dish's cultural heritage.</p>
+            </article>
+
+            <article class="value-card">
+                <span class="value-icon"><i class="fas fa-star"></i></span>
+                <h3>Excellence in Service</h3>
+                <p>From the moment you arrive until your final farewell, every interaction is designed to make you feel valued. Hospitality is our art form.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: CHEF'S TABLE                                       -->
+    <!-- ============================================================ -->
+    <section class="section" id="chefs">
+        <header class="section-header">
+            <p class="section-tag"><i class="fas fa-user-chef"></i> Meet the Masters</p>
+            <h2>Behind Every Dish, There's a Story</h2>
+            <p>Our chefs bring decades of experience, global training, and an unwavering passion for culinary excellence to every plate they craft.</p>
+        </header>
+
+        <div class="chefs-grid">
+            <!-- Chef 1 (Large) -->
+            <article class="chef-card chef-card-large">
+                <span class="chef-icon"><i class="fas fa-egg"></i></span>
+                <div class="chef-info">
+                    <h3>Chef Meherun Islam</h3>
+                    <p class="chef-title">Head Chef &amp; Culinary Director</p>
+                    <p class="chef-experience"><i class="fas fa-clock"></i> 14 Years of Excellence</p>
+                    <p class="chef-quote">
+                        “Every dish carries a memory—a taste of home, a whisper of tradition, a spark of innovation. My grandmother's kitchen taught me that food is the most honest language we speak.”
+                    </p>
+                    <p class="chef-bio">
+                        Trained at Le Cordon Bleu, Paris, Chef Meherun worked in Michelin-starred restaurants across Europe before returning home to create something extraordinary.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Chef 2 (Small) -->
+            <article class="chef-card">
+                <span class="chef-icon"><i class="fas fa-candy-cane"></i></span>
+                <h3>Chef Arif Rahman</h3>
+                <p class="chef-title">Pastry Chef &amp; Chocolatier</p>
+                <p class="chef-quote">
+                    “Desserts are not just the final course—they are the sweet punctuation to a perfect meal. I believe in balancing tradition with art.”
+                </p>
+                <p class="chef-experience"><i class="fas fa-clock"></i> 9 Years Experience · Trained in Switzerland</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: TESTIMONIALS                                       -->
+    <!-- ============================================================ -->
+    <section class="section testimonials" id="testimonials">
+        <header class="section-header">
+            <p class="section-tag"><i class="fas fa-comment-dots"></i> Guest Voices</p>
+            <h2>What Our Guests Say</h2>
+            <p>Real stories from real people who have experienced the Hidden Kitchen mystery.</p>
+        </header>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card">
+                <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <p class="testimonial-text">
+                    <i class="fas fa-quote-left" style="color: var(--gold); opacity: 0.3; font-size: 2rem; margin-right: 0.3rem;"></i>
+                    An unforgettable dining experience! The mystery menu kept us guessing and delighted at every course. The Dragon's Breath was thrilling—yes, it's spicy, but absolutely worth it.
+                </p>
+                <h3>Sarah Ahmed</h3>
+                <p class="guest-detail"><i class="fas fa-user"></i> Food Blogger</p>
+            </article>
+
+            <article class="testimonial-card">
+                <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <p class="testimonial-text">
+                    <i class="fas fa-quote-left" style="color: var(--gold); opacity: 0.3; font-size: 2rem; margin-right: 0.3rem;"></i>
+                    Hidden Kitchen is not just a restaurant—it's a journey. The service, the ambiance, and the food are all world-class. I've already recommended it to everyone I know.
+                </p>
+                <h3>James Peterson</h3>
+                <p class="guest-detail"><i class="fas fa-user"></i> Restaurant Critic</p>
+            </article>
+
+            <article class="testimonial-card">
+                <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <p class="testimonial-text">
+                    <i class="fas fa-quote-left" style="color: var(--gold); opacity: 0.3; font-size: 2rem; margin-right: 0.3rem;"></i>
+                    The Midnight Dessert changed my life. I've never tasted anything like it. The secret code concept made us feel like we were part of something exclusive and special.
+                </p>
+                <h3>Priya Sharma</h3>
+                <p class="guest-detail"><i class="fas fa-user"></i> Regular Guest</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7: RESERVATION                                        -->
+    <!-- ============================================================ -->
+    <section class="section reservation" id="reserve">
+        <span class="reservation-line"></span>
+        <h2><i class="fas fa-calendar-check"></i> Reserve Your Table</h2>
+        <p class="reservation-subtitle">
+            Secure your spot at the most exclusive dining experience in the city. The secret menu awaits those who book.
+        </p>
+
+        <form class="reservation-form" action="#reserve" method="post">
+            <div class="field">
+                <label for="guest-email"><i class="fas fa-envelope"></i> Email address</label>
+                <input id="guest-email" name="email" type="email" placeholder="Your email address" required />
+            </div>
+
+            <div class="field">
+                <label for="booking-date"><i class="fas fa-calendar-day"></i> Preferred date</label>
+                <input id="booking-date" name="date" type="date" required />
+            </div>
+
+            <button class="button button-primary" type="submit">
+                <i class="fas fa-check-circle"></i> Reserve Now
+            </button>
+        </form>
+
+        <p class="reservation-note">
+            <i class="fas fa-lock" style="color: var(--gold);"></i>
+            <strong> You will receive your exclusive secret code via email immediately after booking.</strong>
+        </p>
+        <p class="guarantee-badge"><i class="fas fa-star"></i> 100% Satisfaction Guaranteed</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 8: FOOTER                                             -->
+    <!-- ============================================================ -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3><i class="fas fa-utensils" style="color: var(--gold);"></i> Hidden Kitchen</h3>
+                <p>
+                    Where culinary mystery meets unforgettable experiences. We don't just serve food—
+                    we create memories that linger long after the last bite.
+                </p>
+                <p class="footer-contact">
+                    <i class="fas fa-envelope"></i> hello@hiddenkitchen.com<br />
+                    <i class="fas fa-phone-alt"></i> +880 1234 567890
+                </p>
+            </div>
+
+            <div>
+                <h4><i class="fas fa-link"></i> Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#menu"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                    <li><a href="#chefs"><i class="fas fa-chevron-right"></i> Chefs</a></li>
+                    <li><a href="#philosophy"><i class="fas fa-chevron-right"></i> Philosophy</a></li>
+                    <li><a href="#reserve"><i class="fas fa-chevron-right"></i> Reserve</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4><i class="fas fa-concierge-bell"></i> Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#footer"><i class="fas fa-chevron-right"></i> Private Dining</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-right"></i> Corporate Events</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-right"></i> Catering</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-right"></i> Cooking Classes</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-right"></i> Gift Vouchers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4><i class="fas fa-share-alt"></i> Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#footer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#footer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#footer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#footer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#footer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p class="footer-detail"><i class="fas fa-clock"></i> Open: Tue-Sun, 6PM - 11PM</p>
+                <p class="footer-detail"><i class="fas fa-map-marker-alt"></i> Location: Gulshan, Dhaka</p>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Hidden Kitchen. All rights reserved.</span>
+                <span><i class="fas fa-lock"></i> Secrecy is our recipe | Made with <i class="fas fa-heart" style="color: #FF4D4D;"></i></span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
