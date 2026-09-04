@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Senior DevOps and SRE engineer portfolio" />
+    <title>Arfan Ovi | DevOps Engineer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: NAVIGATION                                        -->
+    <!-- ============================================================ -->
+    <header class="nav" id="top">
+        <div class="wrap nav-inner">
+            <a class="brand" href="#top">
+                <span class="brand-mark"><span>+</span></span>
+                <span>AO / OPS</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#pipeline"><i class="fas fa-code-branch"></i> Pipeline</a>
+                <a href="#toolchain"><i class="fas fa-cubes"></i> Toolchain</a>
+                <a href="#projects"><i class="fas fa-folder-open"></i> Case studies</a>
+                <a href="#contact"><i class="fas fa-paper-plane"></i> Connect</a>
+            </nav>
+            <div class="nav-health">
+                <i class="fas fa-circle dot"></i>
+                <span>SYS HEALTH <b id="cpu">42%</b></span>
+            </div>
+            <button class="menu" aria-label="Open navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: HERO                                              -->
+    <!-- ============================================================ -->
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <div class="eyebrow"><i class="fas fa-terminal"></i> Senior DevOps / SRE Engineer</div>
+                <h1>Systems that <em>ship.</em><br />Platforms that last.</h1>
+                <p class="hero-copy">I design resilient cloud platforms, automate delivery, and turn operational complexity into a calm, measurable advantage.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#contact"><i class="fas fa-comment-dots"></i> Start a conversation ↗</a>
+                    <a class="btn ghost" href="#projects"><i class="fas fa-arrow-down"></i> Explore my work ↓</a>
+                </div>
+            </div>
+            <div class="hero-orbit" aria-label="Cloud platform visualization">
+                <div class="orbit">
+                    <i class="sat one"></i>
+                    <i class="sat two"></i>
+                    <i class="sat three"></i>
+                    <div class="orbit-core">
+                        <div>
+                            <strong>99.98%</strong>
+                            <span>PLATFORM UPTIME / LAST 12 MO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <canvas class="hero-packets" id="heroPackets" aria-hidden="true"></canvas>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: ABOUT / CONSOLE                                   -->
+    <!-- ============================================================ -->
+    <section class="section alt" id="about">
+        <div class="wrap">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow"><i class="fas fa-terminal"></i> 01 / Operator console</div>
+                    <h2>Read the <span>runbook.</span></h2>
+                </div>
+                <span class="tiny"><i class="fas fa-code"></i> A portfolio with an SSH prompt</span>
+            </div>
+
+            <div class="command-layout">
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <i></i><i></i><i></i>
+                        <span class="terminal-title">root@alex-portfolio:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div>
+                            <span class="prompt"><i class="fas fa-chevron-right"></i> root@portfolio:~$</span>
+                            <span id="typed">initializing profile...</span>
+                        </div>
+                        <div class="terminal-output" id="terminalOutput"></div>
+                        <div class="cmds">
+                            <button class="cmd" data-command="about"><i class="fas fa-user"></i> ./about</button>
+                            <button class="cmd" data-command="skills"><i class="fas fa-cog"></i> ./skills</button>
+                            <button class="cmd" data-command="projects"><i class="fas fa-folder"></i> ./projects</button>
+                            <button class="cmd" data-command="contact"><i class="fas fa-envelope"></i> ./contact</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metrics">
+                    <article class="metric">
+                        <span class="metric-label"><i class="fas fa-rocket"></i> Total deployments</span>
+                        <div class="metric-value"><span class="counter" data-target="12847">0</span> <small>↗</small></div>
+                        <span class="metric-tag">+18.4% this quarter</span>
+                    </article>
+
+                    <article class="metric">
+                        <span class="metric-label"><i class="fas fa-clock"></i> Uptime SLO</span>
+                        <div class="metric-value">99.98%</div>
+                        <svg class="ring" viewBox="0 0 80 80">
+                            <circle class="track" cx="40" cy="40" r="32"></circle>
+                            <circle class="progress" cx="40" cy="40" r="32"></circle>
+                        </svg>
+                        <span class="metric-tag">within error budget</span>
+                    </article>
+
+                    <article class="metric">
+                        <span class="metric-label"><i class="fas fa-exclamation-triangle"></i> Incidents resolved</span>
+                        <div class="metric-value">2,341</div>
+                        <span class="metric-tag">MTTR: 6.2 mins</span>
+                    </article>
+
+                    <article class="metric">
+                        <span class="metric-label"><i class="fas fa-server"></i> Active nodes</span>
+                        <div class="metric-value">48</div>
+                        <span class="metric-tag">● Scaling</span>
+                        <span class="scale">
+                            <i></i><i></i><i></i><i></i><i></i>
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: PIPELINE                                          -->
+    <!-- ============================================================ -->
+    <section class="section pipeline-section" id="pipeline">
+        <div class="wrap">
+            <div class="eyebrow"><i class="fas fa-code-branch"></i> 02 / Delivery system</div>
+            <h2><i class="fas fa-bolt"></i> GitOps &amp; CI/CD <span>pipeline.</span></h2>
+
+            <div class="pipeline">
+                <article class="stage">
+                    <div class="stage-node"><i class="fas fa-code"></i></div>
+                    <div>
+                        <h3>Git Push</h3>
+                        <p>Developer commit</p>
+                    </div>
+                    <span class="stage-tip">Lead time: 42 sec</span>
+                </article>
+
+                <article class="stage">
+                    <div class="stage-node"><i class="fab fa-docker"></i></div>
+                    <div>
+                        <h3>Docker Build</h3>
+                        <p>Trivy scanning</p>
+                    </div>
+                    <span class="stage-tip">Build time: 3m 22s</span>
+                </article>
+
+                <article class="stage">
+                    <div class="stage-node"><i class="fas fa-vial"></i></div>
+                    <div>
+                        <h3>Integration</h3>
+                        <p>Newman tests</p>
+                    </div>
+                    <span class="stage-tip">Pass rate: 99.4%</span>
+                </article>
+
+                <article class="stage">
+                    <div class="stage-node"><i class="fas fa-cubes"></i></div>
+                    <div>
+                        <h3>Staging</h3>
+                        <p>ArgoCD sync</p>
+                    </div>
+                    <span class="stage-tip">Sync time: 38 sec</span>
+                </article>
+
+                <article class="stage">
+                    <div class="stage-node"><i class="fas fa-fire"></i></div>
+                    <div>
+                        <h3>Smoke tests</h3>
+                        <p>Production gate</p>
+                    </div>
+                    <span class="stage-tip">Coverage: 87%</span>
+                </article>
+
+                <article class="stage">
+                    <div class="stage-node"><i class="fas fa-flag-checkered"></i></div>
+                    <div>
+                        <h3>Blue / Green</h3>
+                        <p>Production</p>
+                    </div>
+                    <span class="stage-tip">Rollback: 2m 04s</span>
+                </article>
+            </div>
+
+            <div class="pipeline-status">
+                DEPLOYMENT STATUS: <b id="pipelineStatus">Healthy</b> <i class="fas fa-circle" style="color: var(--mint); font-size: 8px; margin-left: 6px;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: TOOLCHAIN                                         -->
+    <!-- ============================================================ -->
+    <section class="section" id="toolchain">
+        <div class="wrap">
+            <div class="eyebrow"><i class="fas fa-cubes"></i> 03 / Platform architecture</div>
+            <h2><i class="fas fa-cloud"></i> Infrastructure as Code <span>&amp; cloud providers.</span></h2>
+
+            <div class="tools">
+                <article class="tool">
+                    <div class="tool-inner">
+                        <div class="tool-face">
+                            <div class="tool-icon"><i class="fab fa-docker"></i></div>
+                            <div class="tool-name">Docker</div>
+                            <div class="tool-level">CONTAINER RUNTIME / 94%</div>
+                        </div>
+                        <div class="tool-face back">Repeatable images, multi-stage builds, and secure supply chains from commit to runtime.</div>
+                    </div>
+                </article>
+
+                <article class="tool">
+                    <div class="tool-inner">
+                        <div class="tool-face">
+                            <div class="tool-icon"><i class="fas fa-cubes"></i></div>
+                            <div class="tool-name">Kubernetes</div>
+                            <div class="tool-level">ORCHESTRATION / 95%</div>
+                        </div>
+                        <div class="tool-face back">Expert. Managed 50+ node clusters with Istio and Horizontal Pod Autoscaler.</div>
+                    </div>
+                </article>
+
+                <article class="tool">
+                    <div class="tool-inner">
+                        <div class="tool-face">
+                            <div class="tool-icon"><i class="fas fa-code"></i></div>
+                            <div class="tool-name">Terraform</div>
+                            <div class="tool-level">PROVISIONING / 92%</div>
+                        </div>
+                        <div class="tool-face back">Advanced. Built multi-region AWS environments using modules and remote state.</div>
+                    </div>
+                </article>
+
+                <article class="tool">
+                    <div class="tool-inner">
+                        <div class="tool-face">
+                            <div class="tool-icon"><i class="fab fa-aws"></i></div>
+                            <div class="tool-name">AWS</div>
+                            <div class="tool-level">CLOUD / 90%</div>
+                        </div>
+                        <div class="tool-face back">Expert. Certified. Specializing in EKS, VPC, EC2, RDS, and S3.</div>
+                    </div>
+                </article>
+
+                <article class="tool">
+                    <div class="tool-inner">
+                        <div class="tool-face">
+                            <div class="tool-icon"><i class="fab fa-microsoft"></i></div>
+                            <div class="tool-name">Azure</div>
+                            <div class="tool-level">CLOUD / 78%</div>
+                        </div>
+                        <div class="tool-face back">Production experience with AKS, Azure DevOps, identity, and hybrid networks.</div>
+                    </div>
+                </article>
+
+                <article class="tool">
+                    <div class="tool-inner">
+                        <div class="tool-face">
+                            <div class="tool-icon"><i class="fas fa-robot"></i></div>
+                            <div class="tool-name">Ansible</div>
+                            <div class="tool-level">AUTOMATION / 88%</div>
+                        </div>
+                        <div class="tool-face back">Idempotent configuration, fleet bootstrapping, and zero-touch operating systems.</div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="graph-wrap">
+                <div class="graph-head">
+                    <h3><i class="fas fa-project-diagram"></i> Terraform Resource Graph Visualizer</h3>
+                    <span>VPC / us-east-1 / HEALTHY</span>
+                </div>
+                <div class="resource-map">
+                    <div class="resource-node"><strong><i class="fas fa-exchange-alt"></i></strong>Internet Gateway</div>
+                    <div class="resource-node"><strong><i class="fas fa-network-wired"></i></strong>Public Subnet</div>
+                    <div class="resource-node"><strong><i class="fas fa-server"></i></strong>EC2 Instances</div>
+                    <div class="resource-node"><strong><i class="fas fa-database"></i></strong>RDS Cluster</div>
+                    <div class="resource-node"><strong><i class="fas fa-network-wired"></i></strong>Private Subnet</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: PROJECTS                                          -->
+    <!-- ============================================================ -->
+    <section class="section alt" id="projects">
+        <div class="wrap">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow"><i class="fas fa-folder-open"></i> 04 / Deep project vault</div>
+                    <h2><i class="fas fa-box"></i> Production <span>case studies.</span></h2>
+                </div>
+                <span class="tiny"><i class="fas fa-mouse-pointer"></i> Select a node to inspect the deployment</span>
+            </div>
+
+            <div class="projects">
+                <article class="project" data-project="eks">
+                    <div class="project-number"><i class="fas fa-tag"></i> CASE / 001</div>
+                    <h3>High-Availability EKS Cluster</h3>
+                    <p>Resilient compute for a business-critical platform with no room for a single point of failure.</p>
+                    <div class="project-foot"><i class="fas fa-arrow-right"></i> TERRAFORM · KUBERNETES · AWS ↗</div>
+                </article>
+
+                <article class="project" data-project="migration">
+                    <div class="project-number"><i class="fas fa-tag"></i> CASE / 002</div>
+                    <h3>Zero-Downtime Migration</h3>
+                    <p>On-premise workloads moved to AWS while Black Friday traffic climbed to its peak.</p>
+                    <div class="project-foot"><i class="fas fa-arrow-right"></i> AWS · BLUE/GREEN · SRE ↗</div>
+                </article>
+
+                <article class="project" data-project="gitops">
+                    <div class="project-number"><i class="fas fa-tag"></i> CASE / 003</div>
+                    <h3>GitOps with ArgoCD &amp; Crossplane</h3>
+                    <p>A paved road from pull request to production for 20 development teams.</p>
+                    <div class="project-foot"><i class="fas fa-arrow-right"></i> ARGOCD · CROSSPLANE · GITLAB ↗</div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7: OBSERVABILITY                                     -->
+    <!-- ============================================================ -->
+    <section class="section observability" id="observability">
+        <div class="wrap">
+            <div class="eyebrow"><i class="fas fa-chart-line"></i> 05 / Production readiness</div>
+            <h2><i class="fas fa-chart-bar"></i> Observability <span>by default.</span></h2>
+
+            <div class="obs-chart">
+                <div class="graph-head">
+                    <h3><i class="fas fa-wave-square"></i> Service resource telemetry</h3>
+                    <span><i class="fas fa-circle" style="color: #00ffaa; font-size: 8px;"></i> LIVE / LAST 5 MINUTES</span>
+                </div>
+                <canvas id="telemetry" width="1100" height="290"></canvas>
+            </div>
+
+            <div class="obs-pills">
+                <article class="obs-pill">
+                    <h3><i class="fas fa-ruler"></i> Service Level Indicators</h3>
+                    <p>Request Latency: <strong>98ms</strong></p>
+                </article>
+                <article class="obs-pill">
+                    <h3><i class="fas fa-bullseye"></i> Service Level Objectives</h3>
+                    <p><strong>99.95%</strong> uptime achieved</p>
+                </article>
+                <article class="obs-pill">
+                    <h3><i class="fas fa-percent"></i> Error Budget</h3>
+                    <p>Remaining: <strong>4.5%</strong> (Safe Zone)</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 8: CONTACT                                           -->
+    <!-- ============================================================ -->
+    <section class="section" id="contact">
+        <div class="wrap contact-layout">
+            <div class="contact-copy">
+                <div class="eyebrow"><i class="fas fa-paper-plane"></i> 06 / Connect &amp; deploy</div>
+                <h2>Let's ship something <span>reliable.</span></h2>
+                <p>Have a platform challenge, an unruly pipeline, or a production system that deserves a calmer future? Send a signal.</p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn ↗</a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub ↗</a>
+                    <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i> X ↗</a>
+                </div>
+            </div>
+
+            <div>
+                <form class="contact-terminal" id="contactForm">
+                    <div class="form-row">
+                        <label><i class="fas fa-user"></i> root@portfolio:~$ Name:</label>
+                        <input id="name" autocomplete="name" required />
+                    </div>
+                    <div class="form-row">
+                        <label><i class="fas fa-envelope"></i> root@portfolio:~$ Email:</label>
+                        <input id="email" type="email" autocomplete="email" required />
+                    </div>
+                    <div class="form-row">
+                        <label><i class="fas fa-comment"></i> root@portfolio:~$ Message:</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <span class="form-message" id="formMessage"></span>
+                        <button class="btn" type="submit"><i class="fas fa-paper-plane"></i> Transmit message ↗</button>
+                    </div>
+                </form>
+                <button class="btn ghost" id="resume" style="margin-top:12px;"><i class="fas fa-file-pdf"></i> Export resume</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 9: FOOTER                                            -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <span>© <span id="year"></span> Arfan Ovi | All Rights Reserved</span>
+            <span class="footer-center"><i class="fas fa-check-circle"></i> SOC2 Compliant | <i class="fas fa-shield-alt"></i> Zero-Trust | <i class="fas fa-cloud"></i> Multi-Cloud</span>
+            <span><i class="fab fa-linkedin"></i> · <i class="fab fa-github"></i> · <i class="fab fa-twitter"></i></span>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- MODAL                                                       -->
+    <!-- ============================================================ -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="close" id="closeModal" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="eyebrow"><i class="fas fa-archway"></i> Architecture brief / <span id="modalRole"></span></div>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-grid">
+                <div>
+                    <h4><i class="fas fa-exclamation-circle"></i> Challenge</h4>
+                    <p id="modalChallenge"></p>
+                    <h4><i class="fas fa-chart-line"></i> Results</h4>
+                    <p id="modalResults"></p>
+                </div>
+                <div>
+                    <h4><i class="fas fa-tools"></i> Solution</h4>
+                    <ul id="modalSolution"></ul>
+                </div>
+            </div>
+            <h4><i class="fas fa-code-branch"></i> Architecture</h4>
+            <pre id="modalArch"></pre>
+            <h4><i class="fas fa-tags"></i> Technologies used</h4>
+            <div class="tags" id="modalTags"></div>
+            <a href="https://github.com" target="_blank" class="btn" style="display:inline-block;margin-top:24px;"><i class="fab fa-github"></i> View on GitHub ↗</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
