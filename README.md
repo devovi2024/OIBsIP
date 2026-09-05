@@ -7,9 +7,9 @@
 
 | Project | Live Link | Status |
 |---------|-----------|--------|
-| 🍽️ **Landing Page** – *Hidden Kitchen* | [🔗 menuismystery.netlify.app](https://menuismystery.netlify.app/) | ✅ Live |
-| 🧑‍💻 **DevOps Portfolio** – *Terminal-Style Resume* | [🔗 devopsportfoolio.netlify.app](https://devopsportfoolio.netlify.app/) | ✅ Live |
-| 🌡️ **Temperature Converter** – *Live Conversion Tool* | [🔗 temperatureconverterlive.netlify.app](https://temperatureconverterlive.netlify.app/) | ✅ Live |
+| 🍽️ **Landing Page** – *Hidden Kitchen* | [🔗 https://kitchenhood.vercel.app](https://kitchenhood.vercel.app/) | ✅ Live |
+| 🧑‍💻 **DevOps Portfolio** – *Terminal-Style Resume* | [🔗 https://devopsportfolio-eight.vercel.app/](https://devopsportfolio-eight.vercel.app/) | ✅ Live |
+| 🌡️ **Temperature Converter** – *Live Conversion Tool* | [🔗 https://tempconvert-five.vercel.app](https://tempconvert-five.vercel.app/) | ✅ Live |
 
 ---
 
