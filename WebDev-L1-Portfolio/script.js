@@ -278,6 +278,7 @@ function drawGraph() {
     canvas.width = w * dpr;
     canvas.height = h * dpr;
     canvas.style.height = h + 'px';
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
 
     ctx.clearRect(0, 0, w, h);
