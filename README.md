@@ -1,45 +1,60 @@
-# 🚀 Oasis Infobyte – Level 1 Projects
+# 🚀 Oasis Infobyte – Web Development Internship
 
-
----
-
-## 🌐 Live Demos
-
-| Project | Live Link | Status |
-|---------|-----------|--------|
-| 🍽️ **Landing Page** – *Hidden Kitchen* | [🔗 https://kitchenhood.vercel.app](https://kitchenhood.vercel.app/) | ✅ Live |
-| 🧑‍💻 **DevOps Portfolio** – *Terminal-Style Resume* | [🔗 https://devopsportfolio-eight.vercel.app/](https://devopsportfolio-eight.vercel.app/) | ✅ Live |
-| 🌡️ **Temperature Converter** – *Live Conversion Tool* | [🔗 https://tempconvert-five.vercel.app](https://tempconvert-five.vercel.app/) | ✅ Live |
+This repository contains my complete submissions for the **Oasis Infobyte Web App** — covering **Level 1** and **Level 2** tasks.
 
 ---
 
 ## 📌 Project Purpose
 
-The goal of this internship was to build **3 fully functional, responsive, and interactive web projects** using only **HTML, CSS, and vanilla JavaScript**.
+The goal of this internship was to build **fully functional, responsive, and interactive web projects** using **HTML, CSS, and Vanilla JavaScript** — with a focus on clean code, modern UI/UX, and real-world usability.
 
-### 1. 🍽️ Landing Page – Hidden Kitchen
-A premium, visually immersive brand landing page for a luxury dining experience.  
-**Key features:**
-- Glassmorphism sticky navigation
-- Cinematic hero section with animated gradient text
-- Interactive dish cards with hover effects
-- Fully responsive (mobile-first)
+---
 
-### 2. 🧑‍💻 DevOps Portfolio – Terminal-Style Resume
-An interactive, terminal-inspired portfolio designed for a DevOps / SRE engineer.  
-**Key features:**
-- Live terminal commands (`./about`, `./skills`, `./projects`)
-- CI/CD pipeline visualizer
-- Real-time metrics dashboard
-- Project case studies with modals
-- Fully responsive
+## 🌐 Live Demos (All Projects)
 
-### 3. 🌡️ Temperature Converter – Live Conversion Tool
-A real-time temperature converter with a live visual thermometer.  
-**Key features:**
-- Live conversion (updates as you type)
-- Dark / Light mode toggle with persistence
-- Color-coded thermometer (blue → green → orange)
-- Absolute zero validation
-- Responsive
+### 📦 Level 1 – Foundation
 
+| Project | Live Link | Status |
+|---------|-----------|--------|
+| 🍽️ **Landing Page** – *Hidden Kitchen* | [🔗 kitchenhood.vercel.app](https://kitchenhood.vercel.app/) | ✅ Live |
+| 🧑‍💻 **DevOps Portfolio** – *Terminal-Style Resume* | [🔗 devopsportfolio-eight.vercel.app](https://devopsportfolio-eight.vercel.app/) | ✅ Live |
+| 🌡️ **Temperature Converter** – *Live Conversion Tool* | [🔗 tempconvert-five.vercel.app](https://tempconvert-five.vercel.app/) | ✅ Live |
+
+---
+
+### 📦 Level 2 – Interactive Applications
+
+| Project | Live Link | Status |
+|---------|-----------|--------|
+| 🧮 **Calculator** – *Expression Parser with Precedence* | [🔗 oi-bs-ip-git-master-devovi2024s-projects.vercel.app](https://oi-bs-ip-git-master-devovi2024s-projects.vercel.app/) | ✅ Live |
+| 📖 **Tribute Page** – *Dr. A.P.J. Abdul Kalam* | [🔗 tribute-weld.vercel.app](https://tribute-weld.vercel.app/) | ✅ Live |
+| ✅ **To-Do Web App** – *TaskFlow with localStorage* | [🔗 todoapp-plum-kappa.vercel.app](https://todoapp-plum-kappa.vercel.app/) | ✅ Live |
+| 🔐 **Login Authentication System** – *SecureGate with SHA-256* | [🔗 loginsystem-murex.vercel.app](https://loginsystem-murex.vercel.app/) | ✅ Live |
+
+---
+
+---
+
+## 🛠️ Tech Stack (All Projects)
+
+- **HTML5** – Semantic structure
+- **CSS3** – Responsive design, animations, theming
+- **Vanilla JavaScript** – Interactivity, logic, DOM manipulation
+- **Font Awesome 6** – Icons
+- **Google Fonts** – Typography
+- **Vercel** – Deployment
+
+---
+
+## 🧠 Key Learnings
+
+| Skill | Projects |
+|-------|----------|
+| **Responsive Design** | All projects |
+| **CSS Animations & Transitions** | Landing Page, Tribute Page, Portfolio |
+| **DOM Manipulation** | To-Do App, Calculator, Login System |
+| **localStorage Persistence** | To-Do App, Login System, Temperature Converter |
+| **Password Hashing (SHA-256)** | Login System |
+| **Session Management** | Login System |
+| **Expression Parsing (no eval)** | Calculator |
+| **Intersection Observer** | Tribute Page, Portfolio |
