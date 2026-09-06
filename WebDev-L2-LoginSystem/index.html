@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="SecureGate enterprise authentication portal" />
+    <title>SecureGate | Authentication Portal</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ============================================================ -->
+    <!-- SECTION: GLOBAL HEADER                                       -->
+    <!-- ============================================================ -->
+    <header class="site-header" id="site-header">
+        <a class="brand" href="#login" aria-label="SecureGate home">
+            <i class="fas fa-shield-halved"></i> SecureGate
+        </a>
+        <div class="security-status">
+            <i class="fas fa-check-circle" style="color: var(--green);"></i> System Status: Secure
+            <i class="fas fa-lock" style="margin-left: 12px;"></i> TLS 1.3
+            <i class="fas fa-shield" style="margin-left: 12px;"></i> Zero-Trust
+        </div>
+        <div class="header-actions">
+            <span class="session-label">
+                <span class="status-dot"></span>
+                <i class="fas fa-circle"></i> Session: Online
+            </span>
+            <label class="theme-toggle" title="Toggle color theme">
+                <i class="fas fa-moon"></i>
+                <input type="checkbox" id="theme-toggle" aria-label="Toggle light mode" />
+                <span class="switch" aria-hidden="true"></span>
+                <i class="fas fa-sun"></i>
+            </label>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- MAIN CONTENT                                                 -->
+    <!-- ============================================================ -->
+    <main>
+        <!-- ============================================================ -->
+        <!-- VIEW: REGISTRATION                                          -->
+        <!-- ============================================================ -->
+        <section class="view" id="register-view" aria-labelledby="register-title">
+            <div class="auth-card">
+                <p class="eyebrow"><i class="fas fa-id-card"></i> Identity provisioning</p>
+                <h1 class="gradient-text" id="register-title"><i class="fas fa-user-plus"></i> Create Account</h1>
+                <p class="subtitle">Join the secure ecosystem.</p>
+
+                <div class="message error" id="register-error" role="alert"></div>
+                <div class="message success" id="register-success" role="status">
+                    <i class="fas fa-check-circle"></i> Account created! Redirecting to login...
+                </div>
+
+                <form id="register-form" novalidate>
+                    <div class="field">
+                        <input id="reg-username" type="text" placeholder=" " autocomplete="username" required />
+                        <label for="reg-username"><i class="fas fa-user"></i> Username</label>
+                    </div>
+
+                    <div class="field">
+                        <input id="reg-email" type="email" placeholder=" " autocomplete="email" required />
+                        <label for="reg-email"><i class="fas fa-envelope"></i> Email Address</label>
+                    </div>
+
+                    <div class="field">
+                        <input id="reg-password" type="password" placeholder=" " autocomplete="new-password" required />
+                        <label for="reg-password"><i class="fas fa-lock"></i> Password</label>
+                        <button class="toggle-password" type="button" data-target="reg-password" aria-label="Show password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <div class="strength" id="strength-meter" data-score="0" aria-label="Password strength">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <small class="strength-text" id="strength-text">Strength: —</small>
+                        <small class="hint"><i class="fas fa-info-circle"></i> Min 8 chars | 1 number | 1 special char (!@#$%^&*)</small>
+                    </div>
+
+                    <div class="field">
+                        <input id="reg-confirm" type="password" placeholder=" " autocomplete="new-password" required />
+                        <label for="reg-confirm"><i class="fas fa-check-double"></i> Confirm Password</label>
+                        <span class="match" id="match-indicator" aria-live="polite"></span>
+                    </div>
+
+                    <label class="checkbox-row">
+                        <input id="terms" type="checkbox" required />
+                        <span>I agree to the Terms of Service and Privacy Policy.</span>
+                    </label>
+
+                    <button class="primary-button" id="register-button" type="submit">
+                        <i class="fas fa-lock"></i> Create Account
+                    </button>
+                </form>
+
+                <p class="form-note">
+                    <a class="switch-link" href="#login" data-view="login">
+                        Already have an account? <i class="fas fa-arrow-right"></i> Sign In
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- VIEW: LOGIN                                                 -->
+        <!-- ============================================================ -->
+        <section class="view" id="login-view" aria-labelledby="login-title">
+            <div class="auth-card">
+                <p class="eyebrow"><i class="fas fa-shield-halved"></i> Secure access gateway</p>
+                <h1 class="gradient-text" id="login-title"><i class="fas fa-sign-in-alt"></i> Welcome Back</h1>
+                <p class="subtitle">Login to access your dashboard.</p>
+
+                <div class="message error" id="login-error" role="alert"></div>
+
+                <form id="login-form" novalidate>
+                    <div class="field">
+                        <input id="login-username" type="text" placeholder=" " autocomplete="username" required />
+                        <label for="login-username"><i class="fas fa-user"></i> Username or Email</label>
+                    </div>
+
+                    <div class="field">
+                        <input id="login-password" type="password" placeholder=" " autocomplete="current-password" required />
+                        <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+                        <button class="toggle-password" type="button" data-target="login-password" aria-label="Show password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="checkbox-row">
+                            <input id="remember-me" type="checkbox" />
+                            <span><i class="fas fa-clock"></i> Remember me</span>
+                        </label>
+                        <button class="forgot" type="button" id="forgot-password">
+                            <i class="fas fa-question-circle"></i> Forgot password?
+                        </button>
+                    </div>
+
+                    <button class="primary-button" id="login-button" type="submit">
+                        <i class="fas fa-key"></i> Sign In
+                    </button>
+                </form>
+
+                <p class="form-note">
+                    <a class="switch-link" href="#register" data-view="register">
+                        Don't have an account? <i class="fas fa-arrow-right"></i> Create one
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- VIEW: DASHBOARD                                             -->
+        <!-- ============================================================ -->
+        <section class="view" id="dashboard-view" aria-labelledby="dashboard-title">
+            <div class="dashboard-card">
+                <div class="lock unlocked" aria-label="Account unlocked">
+                    <div class="lock-shackle"></div>
+                    <div class="lock-body"></div>
+                </div>
+
+                <div class="welcome">
+                    <p class="eyebrow"><i class="fas fa-user-check"></i> Authenticated workspace</p>
+                    <h1 id="dashboard-title"><i class="fas fa-hand-peace"></i> Welcome back, <span id="welcome-name"></span>!</h1>
+                    <p>Your secure session is active.</p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <small><i class="fas fa-envelope"></i> Email</small>
+                        <strong id="dashboard-email"></strong>
+                    </div>
+                    <div class="info-item">
+                        <small><i class="fas fa-circle-check"></i> Account Status</small>
+                        <strong class="active-badge"><i class="fas fa-check-circle"></i> Active</strong>
+                    </div>
+                    <div class="info-item">
+                        <small><i class="fas fa-calendar-plus"></i> Account Created</small>
+                        <strong id="dashboard-created"></strong>
+                    </div>
+                    <div class="info-item">
+                        <small><i class="fas fa-clock"></i> Last Login</small>
+                        <strong id="dashboard-login"></strong>
+                    </div>
+                </div>
+
+                <div class="badges">
+                    <span class="badge"><i class="fas fa-lock"></i> Encrypted Connection</span>
+                    <span class="badge"><i class="fas fa-shield"></i> MFA Disabled</span>
+                    <span class="badge"><i class="fas fa-hourglass"></i> Session Expires: <span id="session-expiry"></span></span>
+                </div>
+
+                <div class="activity">
+                    <span class="log-title"><i class="fas fa-list-ul"></i> Recent authentication activity</span>
+                    <ul id="activity-list"></ul>
+                </div>
+
+                <button class="logout-button" id="logout-button" type="button">
+                    <i class="fas fa-right-from-bracket"></i> Secure Logout
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- SECTION: GLOBAL FOOTER                                       -->
+    <!-- ============================================================ -->
+    <footer>
+        <span>
+            <i class="fas fa-copyright"></i> <span id="footer-year"></span> SecureGate |
+            Built with <i class="fas fa-heart" style="color: #e63946;"></i> &amp; SHA-256 Encryption | v2.4.1
+        </span>
+        <span class="footer-dot" aria-label="Systems operational"></span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
