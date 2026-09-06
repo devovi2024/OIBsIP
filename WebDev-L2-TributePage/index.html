@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A premium tribute page celebrating Dr. A.P.J. Abdul Kalam, the Missile Man of India and former President of India." />
+    <title>Tribute</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ============================================================ -->
+    <!-- SECTION 1: STICKY NAVIGATION + THEME TOGGLE                  -->
+    <!-- ============================================================ -->
+    <header class="site-header" id="top">
+        <div class="container nav-wrap">
+            <a href="#top" class="brand" aria-label="Go to top">
+                <i class="fas fa-landmark"></i> In Memoriam
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home"><i class="fas fa-home"></i> Home</a>
+                <a href="#biography"><i class="fas fa-book"></i> Biography</a>
+                <a href="#timeline"><i class="fas fa-clock"></i> Timeline</a>
+                <a href="#quote"><i class="fas fa-quote-right"></i> Quote</a>
+
+                <label class="theme-switch" aria-label="Toggle dark mode">
+                    <input id="themeToggle" type="checkbox" />
+                    <span class="theme-slider">
+                        <span class="theme-knob"></span>
+                    </span>
+                </label>
+            </nav>
+
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: MEGA HERO                                         -->
+    <!-- ============================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+            <div class="eyebrow"><i class="fas fa-star"></i> Legacy of a Visionary</div>
+            <h1>Dr. A.P.J. Abdul Kalam</h1>
+            <div class="tagline">
+                <i class="fas fa-rocket"></i> The Missile Man of India
+                <span class="dot-sep">•</span>
+                <i class="fas fa-gem"></i> Visionary Leader
+                <span class="dot-sep">•</span>
+                <i class="fas fa-users"></i> People's President
+            </div>
+
+            <div class="hero-avatar" aria-label="Profile placeholder for Dr. A.P.J. Abdul Kalam">
+                <span>APJ</span>
+            </div>
+
+            <p class="hero-lede">
+                <i class="fas fa-quote-left" style="color: var(--gold); opacity: 0.5; font-size: 1.4rem; margin-right: 0.4rem;"></i>
+                Dream, Dream, Dream. Dreams transform into thoughts and thoughts result in action.
+            </p>
+
+            <a href="#biography" class="scroll-indicator" aria-label="Scroll to biography">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: BIOGRAPHY                                         -->
+    <!-- ============================================================ -->
+    <section class="biography" id="biography">
+        <div class="container">
+            <h2 class="section-heading"><i class="fas fa-book-open"></i> The Journey of a Legend</h2>
+
+            <div class="bio-copy">
+                <p class="reveal">
+                    Born on 15 October 1931 in Rameswaram, Tamil Nadu, Dr. A.P.J. Abdul Kalam rose from an ordinary
+                    family of modest means to become one of the most inspiring figures in modern India. Raised in a close-knit,
+                    deeply spiritual household, he learned early that discipline, humility, and relentless effort could reshape a
+                    life. In a nation shaped by aspiration and struggle, his journey was a reminder that greatness often begins in
+                    circumstances that seem limited, but never in the human spirit.
+                </p>
+
+                <p class="reveal">
+                    Kalam's educational path was marked by determination rather than privilege. He pursued engineering with profound
+                    commitment and eventually joined the Defence Research and Development Organisation (DRDO), where his work on
+                    aerodynamic design and missile technology laid the foundations for future breakthroughs. It was during this time
+                    that he emerged as a brilliant scientist with an unshakable focus on national development. His accomplishments at
+                    ISRO, especially in the development of the SLV-III program, helped establish India's self-reliance in space
+                    technology and inspired a new generation of engineers and innovators.
+                </p>
+
+                <p class="reveal">
+                    As the 11th President of India from 2002 to 2007, Kalam transformed the office of the presidency into a platform
+                    for hope, innovation, and public engagement. He championed a modern vision for India—one rooted in scientific
+                    progress, social inclusion, and ethical leadership. His vision for "India 2020" imagined a nation that could become
+                    a knowledge-rich and technologically advanced society, driven by the energies of its youth. Even beyond politics,
+                    he remained a symbol of accessible leadership, speaking with ordinary citizens as easily as with scientists,
+                    students, and world leaders.
+                </p>
+
+                <p class="reveal">
+                    Kalam's most enduring legacy, however, lies in the way he connected with people. He was a teacher at heart,
+                    passionately encouraging young minds to dream big and act fearlessly. His humility, simplicity, and profound faith
+                    in the potential of India's youth turned him into a beloved national icon. He left behind not only a legacy of
+                    technological achievement but a philosophy of service, curiosity, and courage that continues to inspire millions
+                    across the world to rise above limitation and work toward a better future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: TIMELINE                                          -->
+    <!-- ============================================================ -->
+    <section class="timeline-section" id="timeline">
+        <div class="container timeline-wrapper">
+            <div class="timeline-header">
+                <h2 class="section-heading"><i class="fas fa-timeline"></i> Milestones of a Visionary</h2>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-card left-in">
+                    <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 1931</span>
+                    <h3>Born in Rameswaram</h3>
+                    <p>Dr. A.P.J. Abdul Kalam was born in the temple town of Rameswaram, Tamil Nadu, into a humble family that valued faith, discipline, and hard work.</p>
+                </article>
+
+                <article class="timeline-card right-in">
+                    <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 1960</span>
+                    <h3>Joined DRDO</h3>
+                    <p>He entered the Defence Research and Development Organisation and began contributing to India's missile and aerospace research programs.</p>
+                </article>
+
+                <article class="timeline-card left-in">
+                    <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 1969</span>
+                    <h3>Moved to ISRO</h3>
+                    <p>He transferred to the Indian Space Research Organisation and became closely involved in the development of satellite launch systems.</p>
+                </article>
+
+                <article class="timeline-card right-in">
+                    <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 1980</span>
+                    <h3>Rohini Launch</h3>
+                    <p>India successfully launched the Rohini satellite, a major milestone in the nation's space ambitions and a defining achievement in Kalam's scientific career.</p>
+                </article>
+
+                <article class="timeline-card left-in">
+                    <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2002</span>
+                    <h3>Became President</h3>
+                    <p>He was elected as the 11th President of India, bringing scientific credibility and moral leadership to the highest office.</p>
+                </article>
+
+                <article class="timeline-card right-in">
+                    <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2015</span>
+                    <h3>Legacy Lives On</h3>
+                    <p>After his passing, Kalam left behind an immortal legacy of innovation, humility, and service, continuing to inspire students and citizens everywhere.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: QUOTE BLOCK                                       -->
+    <!-- ============================================================ -->
+    <section class="quote-section" id="quote">
+        <div class="container quote-wrap">
+            <div class="quote-block">
+                <blockquote>
+                    <i class="fas fa-quote-left" style="color: var(--gold); opacity: 0.3; font-size: 1.8rem; margin-right: 0.5rem;"></i>
+                    You have to dream before your dreams can come true.
+                </blockquote>
+                <div class="quote-credit"><i class="fas fa-pen-fancy"></i> — Dr. A.P.J. Abdul Kalam</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: FOOTER                                            -->
+    <!-- ============================================================ -->
+    <footer>
+        <div>
+            <i class="fas fa-copyright"></i> <span id="year"></span> Tribute to Dr. A.P.J. Abdul Kalam |
+             with <i class="fas fa-heart" style="color: #e63946;"></i> Inspiration
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
