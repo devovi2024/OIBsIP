@@ -70,7 +70,7 @@
 
 ---
 
-## 🧪 How to Run
+
 
 1. Clone the repository or download the files.
 2. Open `index.html` in any modern browser.
